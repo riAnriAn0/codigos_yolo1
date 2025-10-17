@@ -23,9 +23,9 @@ model = YOLO("yolov8n_ncnn_model")  # Use the appropriate model file
 while True:
     frame = picam2.capture_array()
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    frame = cv2.resize(frame, (640, 640))
+    frame = cv2.resize(frame, (320, 320))
 
-    results = model(frame, verbose=False)
+    results = model(frame, 0, verbose=False)
 
     inference_time = results[0].speed['inference']
     fps = 1000 / inference_time if inference_time > 0 else 0
