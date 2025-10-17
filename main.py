@@ -20,7 +20,7 @@ picam2.start()
 # Substitua "yolov8n.pt" pelo seu modelo TFLite quantizado para o máximo de performance.
 #model = YOLO("yolov8n_int8.tflite") # Se usou TFLite/Coral
 
-model = YOLO("yolov8n.pt")
+model = YOLO("yolov8n_ncnn_model")
 
 # Pre-allocating frame array for efficiency (small gain, but good practice)
 # frame = picam2.capture_array() # Pode ser removido se o INFERENCE_SIZE for o size da capture
