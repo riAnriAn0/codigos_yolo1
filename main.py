@@ -17,7 +17,7 @@ picam2.configure("preview")
 picam2.start()
 
 # Load YOLOv8
-model = YOLO("yolov8n.pt")  # Use the appropriate model file
+model = YOLO("yolov8n_ncnn_model")  # Use the appropriate model file
 
 
 while True:
