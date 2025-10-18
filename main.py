@@ -15,12 +15,12 @@ picam2.preview_configuration.align()
 picam2.configure("preview")
 picam2.start()
 
-model = YOLO("yolov8n_full_integer_quant.tflite")
+model = YOLO("yolov8n_ncnn_model")
 
 while True:
     frame = picam2.capture_array()
 
-    results = model(frame, verbose=False) 
+    results = model(frame, 0,verbose=False) 
     start_time = time.time()
     
     inference_time_ms = results[0].speed['inference']
