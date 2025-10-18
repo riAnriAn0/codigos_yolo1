@@ -15,7 +15,7 @@ picam2.preview_configuration.align()
 picam2.configure("preview")
 picam2.start()
 
-model = YOLO("yolov8n_int8.tflite")
+model = YOLO("yolov8n_full_integer_quant.tflite")
 
 while True:
     frame = picam2.capture_array()
